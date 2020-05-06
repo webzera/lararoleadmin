@@ -1,0 +1,32 @@
+{
+    "name": "webzera/lararoleadmin",
+    "description": "This is for separate admin panel control",
+    "type": "library",
+    "require": {        
+        "php": "^7.3",
+        "laracasts/flash": "^3.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.0"
+    },
+    "autoload":{
+        "psr-4": {
+            "Webzera\\Lararoleadmin\\": "src"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Webzera\\Lararoleadmin\\Providers\\LararoleadminServiceProvider"
+            ]
+        }
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "webzera",
+            "email": "johnszen@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev"
+}
