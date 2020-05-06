@@ -134,7 +134,7 @@ Route::group(['prefix' => 'laravel-filemanager', 'middleware' => ['web', 'auth:a
 ```
  php artisan storage:link
 ```
-> Edit APP_URL in .env. file, APP_URL=http://localhost/<hostname>/public
+> Edit APP_URL in .env. file, APP_URL='http://localhost/<hostname>/public'
 
 > Open in local `http://localhost/<hostname>admin/` in browser, admin user email : `webzera@webzera.com`
 admin password : `password` to login.
