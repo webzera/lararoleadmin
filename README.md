@@ -6,11 +6,20 @@ Requirements
 Installation
 ------------
 
-> First, install laravel 5.5, and make sure that the database connection settings are correct.
-> Make sure php composer.phar require laravel/ui installed
-> and php artisan ui vue --auth
-> php composer.phar require laracasts/flash for flash messages.
+> First, install laravel 7.0, and make sure that the database connection settings are correct.
 
+> Make sure install auth,
+```
+php composer.phar require laravel/ui
+  and
+php artisan ui vue --auth
+```
+
+> For flash messages install
+```
+php composer.phar require laracasts/flash
+```
+> And Install
 ```
 composer require webzera/lararoleadmin
 ```
