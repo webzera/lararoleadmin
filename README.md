@@ -11,28 +11,28 @@ Installation
 > Make sure install auth,
 ```
 php composer.phar require laravel/ui
-  and
 php artisan ui vue --auth
-```
-
-> For flash messages install
-```
-php composer.phar require laracasts/flash
 ```
 > And Install
 ```
 composer require webzera/lararoleadmin
 ```
-or
+  or
 ```
 php composer.phar require webzera/lararoleadmin
 ```
-After run command you can find config file in `config/lararoleadmin.php`, in this file you can change db connection, App name and mail settings.
+> For flash messages install
+```
+php composer.phar require laracasts/flash
+```
 
-Auth guard [admin] defined config/auth.php file
------------------------------------------------
+Add Admin guard
+---------------
+
+> Auth guard [admin] defined config/auth.php file
+
 Laravel uses guards for authentication which allows you to manage multiple authenticated instances from multiple tables. To create a new guard open the auth.php from the config directory:
-
+```
 'guards' => [
 	[...],
 	'admin' => [
@@ -56,6 +56,7 @@ Laravel uses guards for authentication which allows you to manage multiple authe
             'throttle' => 60,
         ],
     ],
+```    
 
 ```
 php composer.phar dump-autoload or composer dump-autoload
