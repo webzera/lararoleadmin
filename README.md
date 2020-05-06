@@ -136,6 +136,7 @@ Route::group(['prefix' => 'laravel-filemanager', 'middleware' => ['web', 'auth:a
  php artisan storage:link
 ```
 > In PermissionController comment `$this->middleware('checkrole');` and click `Admin Role Permission` in side navigation button, And Uncomment.
+
 > Edit APP_URL in .env. file, APP_URL=`http://localhost/<hostname>/public`
 
 > Open in local `http://localhost/<hostname>admin/` in browser, admin user email : `webzera@webzera.com`
