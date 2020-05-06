@@ -35,7 +35,7 @@ Laravel uses guards for authentication which allows you to manage multiple authe
 	[...],
 	'admins' => [
             'driver' => 'eloquent',
-            'model' => Webzera\Laradmin\Admin::class,
+            'model' => Webzera\Lararoleadmin\Admin::class,
         ],
 ],
 'passwords' => [

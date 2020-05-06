@@ -123,11 +123,8 @@
 <script src="https://cdn.ckeditor.com/4.11.4/standard/ckeditor.js"></script>
 <script>
 var options = {
-  // filebrowserImageBrowseUrl: '/laravel-filemanager?type=Images',
   filebrowserImageBrowseUrl: '/newadminpack/public/laravel-filemanager?type=Images',
   filebrowserImageUploadUrl: '/newadminpack/public/laravel-filemanager/upload?type=Images&_token={{csrf_field() }}',
-  // filebrowserBrowseUrl: '/newadminpack/public/laravel-filemanager?type=Files',
-  // filebrowserUploadUrl: '/newadminpack/public/laravel-filemanager/upload?type=Files&_token={{csrf_field() }}'
 };
 CKEDITOR.replace('page_content', options);
 </script>

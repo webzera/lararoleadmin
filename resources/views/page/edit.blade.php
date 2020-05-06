@@ -100,11 +100,9 @@
 <script src="https://cdn.ckeditor.com/4.11.4/standard/ckeditor.js"></script>
 <script>
 var options = {
-  // filebrowserImageBrowseUrl: '/laravel-filemanager?type=Images',
   filebrowserImageBrowseUrl: '/ruddra/public/laravel-filemanager?type=Images',
   filebrowserImageUploadUrl: '/ruddra/public/laravel-filemanager/upload?type=Images&_token={{csrf_field() }}',
-  // filebrowserBrowseUrl: '/ruddra/public/laravel-filemanager?type=Files',
-  // filebrowserUploadUrl: '/ruddra/public/laravel-filemanager/upload?type=Files&_token={{csrf_field() }}'
+
 };
 CKEDITOR.replace('page_content', options);
 </script>

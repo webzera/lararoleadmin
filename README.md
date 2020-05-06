@@ -44,7 +44,7 @@ Laravel uses guards for authentication which allows you to manage multiple authe
 	[...],
 	'admins' => [
             'driver' => 'eloquent',
-            'model' => Webzera\Laradmin\Admin::class,
+            'model' => Webzera\Lararoleadmin\Admin::class,
         ],
 ],
 'passwords' => [
@@ -88,6 +88,7 @@ Route::get('/admin', 'AdminController@index')->name('admin::home');
 ```php composer.phar dump-autoload``` //must use before migration
 
 ```php artisan migrate:fresh```
+```php artisan db:seed```
 
 Add Text Editer for Page
 ------------------------
@@ -122,7 +123,7 @@ and
 php artisan route:clear
 php artisan config:clear
 ```
-> and add this routes in route/web.php file
+> and add this routes in main route/web.php file 
 
 ```
 Route::group(['prefix' => 'laravel-filemanager', 'middleware' => ['web', 'auth:admin']], function () {
@@ -134,6 +135,7 @@ Route::group(['prefix' => 'laravel-filemanager', 'middleware' => ['web', 'auth:a
 ```
  php artisan storage:link
 ```
+> In PermissionController comment `$this->middleware('checkrole');` and click `Admin Role Permission` in side navigation button, And Uncomment.
 > Edit APP_URL in .env. file, APP_URL=`http://localhost/<hostname>/public`
 
 > Open in local `http://localhost/<hostname>admin/` in browser, admin user email : `webzera@webzera.com`
