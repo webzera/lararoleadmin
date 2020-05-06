@@ -89,51 +89,29 @@ Route::get('/admin', 'AdminController@index')->name('admin::home');
 
 ```php artisan migrate:fresh```
 
-
-Open `http://localhost/<hostname>admin/` in browser,admin user email : `webzera@webzera.com`
-admin password : `password` to login.
-
-
-Page TextEditer
----------------
+Add Text Editer for Page
+------------------------
 > Install ``` Laravel-filemanager ```
-```
-composer require unisharp/laravel-filemanager
-```
+```composer require unisharp/laravel-filemanager```
 or
-```
-php composer.phar require unisharp/laravel-filemanager
-```
+```php composer.phar require unisharp/laravel-filemanager```
 
+> Add this code to your page create index page to get image manager
+```
 @section('scripts')
 <script src="https://cdn.ckeditor.com/4.11.4/standard/ckeditor.js"></script>
 <script>
 var options = {
-  // filebrowserImageBrowseUrl: '/laravel-filemanager?type=Images',
   filebrowserImageBrowseUrl: '/ruddra/public/laravel-filemanager?type=Images',
   filebrowserImageUploadUrl: '/ruddra/public/laravel-filemanager/upload?type=Images&_token={{csrf_field() }}',
-  // filebrowserBrowseUrl: '/ruddra/public/laravel-filemanager?type=Files',
-  // filebrowserUploadUrl: '/ruddra/public/laravel-filemanager/upload?type=Files&_token={{csrf_field() }}'
 };
 CKEDITOR.replace('page_content', options);
 </script>
 @endsection
+```
 
 Laravel-filemanater Publish the package’s config and assets
 -----------------------------------------------------------
-
-################################
-Add service providers
-
- UniSharp\LaravelFilemanager\LaravelFilemanagerServiceProvider::class,
- Intervention\Image\ImageServiceProvider::class,
-
-And add class aliases
-
- 'Image' => Intervention\Image\Facades\Image::class,
-
-
-################################
 
 ```
 php artisan vendor:publish --tag=lfm_config
@@ -144,21 +122,19 @@ and
 php artisan route:clear
 php artisan config:clear
 ```
-and add this routes in route/web.php file
+> and add this routes in route/web.php file
 
 ```
 Route::group(['prefix' => 'laravel-filemanager', 'middleware' => ['web', 'auth:admin']], function () {
  \UniSharp\LaravelFilemanager\Lfm::routes();
  });
  ```
-
-create symbolic link, check the public/storage folder not exist
+> create symbolic link, check the public/storage folder not exist
 
 ```
  php artisan storage:link
 ```
 > Edit APP_URL in .env. file, APP_URL=http://localhost/<hostname>/public
 
-Configurations
---------------
-The file `config/lararoleadmin.php` contains an array of configurations, you can find the default configurations in there.
+> Open in local `http://localhost/<hostname>admin/` in browser, admin user email : `webzera@webzera.com`
+admin password : `password` to login.
