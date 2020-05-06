@@ -71,18 +71,22 @@ or the database seeder file need to update so add force command
 ```
 php artisan vendor:publish --force
 ```
-
-In Http/Kenel.php add this line in
+Add Middleware for check admin Role
+-----------------------------------
+> In Http/Kenel.php add this line in
+```
 protected $routeMiddleware = [
 	[...],
 	'checkrole' => \App\Http\Middleware\CheckRole::class,
 ]
-
-add this line to main route>web.php file
-
-- Route::get('/admin', 'AdminController@index')->name('admin::home');
+```
+> add this line to main route/web.php file
+```
+Route::get('/admin', 'AdminController@index')->name('admin::home');
+```
 
 ```php composer.phar dump-autoload``` //must use before migration
+
 ```php artisan migrate:fresh```
 
 
