@@ -16,9 +16,7 @@ php artisan ui vue --auth
 > And Install
 ```
 composer require webzera/lararoleadmin
-```
   or
-```
 php composer.phar require webzera/lararoleadmin
 ```
 >Add `php composer.phar require laracasts/flash` for flash messages.
@@ -85,6 +83,7 @@ Route::get('/admin', 'AdminController@index')->name('admin::home');
 ```php composer.phar dump-autoload``` //must use before migration
 
 ```php artisan migrate:fresh```
+
 ```php artisan db:seed```
 
 Add Text Editer for Page
@@ -129,5 +128,5 @@ Route::group(['prefix' => 'laravel-filemanager', 'middleware' => ['web', 'auth:a
 
 > Edit APP_URL in .env. file, APP_URL=`http://localhost/<hostname>/public`
 
-> Open in local `http://localhost/<hostname>admin/` in browser, admin user email : `webzera@webzera.com`
+> Open in local `http://localhost/<hostname>admin/login` in browser, admin user email : `webzera@webzera.com`
 admin password : `password` to login.
