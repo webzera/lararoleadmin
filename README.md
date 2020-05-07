@@ -21,6 +21,7 @@ composer require webzera/lararoleadmin
 ```
 php composer.phar require webzera/lararoleadmin
 ```
+>Add `php composer.phar require laracasts/flash` for flash messages.
 
 Add Admin guard
 ---------------
