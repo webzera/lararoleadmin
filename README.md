@@ -93,22 +93,15 @@ Add Text Editer for Page
 or
 ```php composer.phar require unisharp/laravel-filemanager```
 
-> Add this code to your page create index page to get image manager
+> Change url for `ImageBrowseUrl` and `ImageUploadUrl` in page create blade and edit blade.
+
+> Like
 ```
-@section('scripts')
-<script src="https://cdn.ckeditor.com/4.11.4/standard/ckeditor.js"></script>
-<script>
-var options = {
   filebrowserImageBrowseUrl: '/ruddra/public/laravel-filemanager?type=Images',
-  filebrowserImageUploadUrl: '/ruddra/public/laravel-filemanager/upload?type=Images&_token={{csrf_field() }}',
-};
-CKEDITOR.replace('page_content', options);
-</script>
-@endsection
+  filebrowserImageUploadUrl: '/ruddra/public/laravel-filemanager/
 ```
 
-Laravel-filemanater Publish the package’s config and assets
------------------------------------------------------------
+> Laravel-filemanater Publish the package’s config and assets
 
 ```
 php artisan vendor:publish --tag=lfm_config
