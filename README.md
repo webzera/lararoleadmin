@@ -77,7 +77,7 @@ protected $routeMiddleware = [
 ```
 > add this line to main route/web.php file
 ```
-Route::get('/admin', 'AdminController@index')->name('admin::home');
+Route::get('/admin', 'Admin\AdminController@index')->name('admin::home');
 ```
 
 ```php composer.phar dump-autoload``` //must use before migration
@@ -88,7 +88,8 @@ Route::get('/admin', 'AdminController@index')->name('admin::home');
 
 Add Text Editer for Page
 ------------------------
-> Install ``` Laravel-filemanager ```
+> Install Laravel-filemanager 
+
 ```composer require unisharp/laravel-filemanager```
 or
 ```php composer.phar require unisharp/laravel-filemanager```

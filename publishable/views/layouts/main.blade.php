@@ -20,17 +20,17 @@
 
 <body>
   <div class="wrapper ">
-    @include('admin::layouts.sidenav')
+    @include('admin.layouts.sidenav')
     <div class="main-panel">
       <!-- Navbar -->
-      @include('admin::layouts.nav')
+      @include('admin.layouts.nav')
       <!-- End Navbar -->
       <div class="content">
         <div class="container-fluid">
           @yield('content')
         </div>
       </div>
-      @include('admin::layouts.footer')
+      @include('admin.layouts.footer')
     </div>
   </div>
   <script src="{{ asset('vendor/lararoleadmin/js/core/jquery.min.js') }}"></script>

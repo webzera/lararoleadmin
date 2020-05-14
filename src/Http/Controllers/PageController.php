@@ -29,7 +29,7 @@ class PageController extends Controller
     public function index()
     {
         $allpages=Page::orderBy('created_at', 'desc')->paginate(10);
-        return view('admin::page.index')->with('allpages', $allpages);        
+        return view('admin.page.index')->with('allpages', $allpages);        
     }
 
     /**
@@ -39,7 +39,7 @@ class PageController extends Controller
      */
     public function create()
     {
-        return view('admin::page.create');
+        return view('admin.page.create');
     }
 
     /**
@@ -123,7 +123,7 @@ class PageController extends Controller
     {
         $page = Page::findOrFail($id);
         $menulist = Menulist::where('page_id', $id)->first();
-        return view('admin::page.edit')->with([
+        return view('admin.page.edit')->with([
             'page' => $page,
             'menulist' => $menulist,
         ]);

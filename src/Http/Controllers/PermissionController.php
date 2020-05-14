@@ -77,7 +77,7 @@ class PermissionController extends Controller
             // }
         }
         $permissionLists=Permission::where('status', 1)->orderBy('created_at', 'desc')->paginate(10);
-        return view('admin::rolebase.adminpermissionlist')->with('permissionLists', $permissionLists);
+        return view('admin.rolebase.adminpermissionlist')->with('permissionLists', $permissionLists);
     }
     public function permissionassign(Request $request)
     {

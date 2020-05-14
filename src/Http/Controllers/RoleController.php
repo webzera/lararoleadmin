@@ -22,7 +22,7 @@ class RoleController extends Controller
     public function adminrolelist()
     {        
          $userdetails=Admin::orderBy('created_at', 'asc')->paginate(10);
-        return view('admin::rolebase.adminrolelist')->with('userdetails', $userdetails);
+        return view('admin.rolebase.adminrolelist')->with('userdetails', $userdetails);
     }
     public function createroleform(){
          return view('admin.rolebase.create');

@@ -29,7 +29,7 @@ class NotificationController extends Controller
     {
         $adminn=Admin::find(1);
         $allnotify=$adminn->notifications();
-        return view('admin::notification.allnotify')->with('allnotify',$allnotify);
+        return view('admin.notification.allnotify')->with('allnotify',$allnotify);
     }
     public function viewnotify($id)
     {

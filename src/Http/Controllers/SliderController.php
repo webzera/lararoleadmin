@@ -31,7 +31,7 @@ class SliderController extends Controller
 
 	public function index(){
 		$allslider=Slider::orderBy('created_at', 'desc')->paginate(10);
-      return view('admin::slider.index')->with('allslider', $allslider);
+      return view('admin.slider.index')->with('allslider', $allslider);
 	}
     /**
      * Show the form for creating a new resource.
@@ -40,7 +40,7 @@ class SliderController extends Controller
      */
     public function create()
     {
-        return view('admin::slider.create');
+        return view('admin.slider.create');
     }
 
     /**
@@ -110,7 +110,7 @@ class SliderController extends Controller
     public function edit($id)
     {
       $slider = Slider::findOrFail($id);
-      return view('admin::slider.edit')->with('slider', $slider);
+      return view('admin.slider.edit')->with('slider', $slider);
     }
 
     /**

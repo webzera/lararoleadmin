@@ -23,12 +23,12 @@ class AdminuserController extends Controller
         $this->middleware('checkrole');
     }
     public function create(){
-        return view('admin::adminuser.create');
+        return view('admin.adminuser.create');
     }
     public function index()
     {        
         $userdetails=Admin::orderBy('created_at', 'asc')->paginate(10);
-        return view('admin::adminuser.adminlist')->with('userdetails', $userdetails);
+        return view('admin.adminuser.adminlist')->with('userdetails', $userdetails);
     }
     public function store(Request $request){
         $this->validate($request, [
@@ -75,7 +75,7 @@ class AdminuserController extends Controller
     public function edit($id)
     {
       $admin = Admin::findOrFail($id);
-      return view('admin::adminuser.edit')->with('admin', $admin);
+      return view('admin.adminuser.edit')->with('admin', $admin);
     }
     public function update(Request $request, $id)
     {
