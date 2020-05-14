@@ -1,1 +1,0 @@
-<p>This is admin package page from controller with view file throuth git and packagist</p>
