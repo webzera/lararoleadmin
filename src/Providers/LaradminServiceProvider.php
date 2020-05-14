@@ -39,6 +39,12 @@ class LararoleadminServiceProvider extends ServiceProvider
 			'controller' => [
 				"$bashPath/publishable/Controllers/AdminController.php" => app_path('Http/Controllers/AdminController.php') 
 			],
+			'views' => [
+				"$bashPath/publishable/views" => resource_path('views/admin'),			
+			],
+			'notification' => [
+				"$bashPath/publishable/Notification" => app_path('Http/Notifications'),			
+			],
 			'public' => [
 				"$bashPath/publishable/public/vendor/lararoleadmin" => public_path('vendor/lararoleadmin') 
 			]
